@@ -1,0 +1,26 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px; /* 1 rem = 10px */
+}
+
+.Titulo{
+    text-align: center;
+    font-size: 3.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Titulo span{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
