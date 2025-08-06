@@ -174,7 +174,7 @@ p{
 }
 
 /** Scroll Snap **/
-.hero, .contenedor.sombra, .formulario {
+/* .hero, .contenedor.sombra, .formulario {
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
@@ -182,7 +182,7 @@ p{
 .servicios, .navegacion-principal {
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
+} */
 
 @media (min-width: 768px) {
     .servicios{
