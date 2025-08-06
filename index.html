@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preload" href="css/Estilos.css" as="style">
     <link rel="stylesheet" href="css/Estilos.css">
+    <script src="js/formulario.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
         <nav class="navegacion-principal contenedor">
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
-            <!-- <a href="#servicios">Clientes</a> -->
+            <!-- <a>Clientes</a> -->
             <a href="#contacto">Contacto</a>
         </nav>
     </div>
@@ -141,50 +142,5 @@
     <footer>
         <p>Todos los derechos reservados, Evenezer Luna Freelancer</p>
     </footer>
-
-    <script>
-        document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Obtener los valores del formulario
-            const nombre = document.getElementById('nombre').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const correo = document.getElementById('correo').value.trim();
-            const mensaje = document.getElementById('mensaje').value.trim();
-            
-            // Validar que todos los campos estén llenos
-            if (!nombre || !telefono || !correo || !mensaje) {
-                alert('Por favor, llena todos los campos del formulario.');
-                return;
-            }
-            
-            // Crear el mensaje para WhatsApp
-            const mensajeWhatsApp = `¡Hola! Me gustaría contactarte para servicios freelancer.
-
-*Nombre:* ${nombre}
-*Teléfono:* ${telefono}
-*Correo:* ${correo}
-
-*Mensaje:*
-${mensaje}
-
-Enviado desde tu sitio web.`;
-            
-            // Codificar el mensaje para URL
-            const mensajeCodificado = encodeURIComponent(mensajeWhatsApp);
-            
-            // Número de WhatsApp (formato internacional sin + ni espacios)
-            const numeroWhatsApp = '526673011907'; // México (+52) + tu número
-            
-            // URL de WhatsApp
-            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
-            
-            // Abrir WhatsApp en una nueva ventana
-            window.open(urlWhatsApp, '_blank');
-            
-            // Opcional: limpiar el formulario después del envío
-            this.reset();
-        });
-    </script>
 </body>
 </html>
